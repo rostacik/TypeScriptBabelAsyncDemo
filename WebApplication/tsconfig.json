@@ -1,0 +1,10 @@
+﻿{
+  "compilerOptions": {
+    "experimentalAsyncFunctions": true,
+    "inlineSources": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": false,
+    "target": "es6"
+  }
+}

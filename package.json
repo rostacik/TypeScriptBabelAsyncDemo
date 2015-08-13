@@ -1,0 +1,12 @@
+{
+  "name": "WebApplication",
+  "version": "1.0.0",
+  "description": "samle of ts async stuff",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-typescript": "^2.8.0",
+    "typescript": "^1.6.0-dev.20150813"
+  }
+}
