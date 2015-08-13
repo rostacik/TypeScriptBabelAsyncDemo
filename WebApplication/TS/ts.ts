@@ -1,25 +1,11 @@
 ﻿//ambient declaration of RSVP library
 declare var RSVP: any;
 
-module someTsModule02 {
+module sampleTsModule {
     /**
     * async version of confirm dialog in the browser
     */
-    export function getConfirmAsynString(): Promise<string> {
-        var promise = new RSVP.Promise(function (resolve: (value: string) => void, reject: (reason: string) => void) {
-            let res: boolean = confirm("yes or no?");
-
-            if (res == true) {
-                resolve("You pressed OK!");
-            } else {
-                reject("You pressed Cancel!");
-            }
-        });
-
-        return promise;
-    }
-
-    export function getConfirmAsyn(message: string): Promise<boolean> {
+    export function getConfirmAsync(message: string): Promise<boolean> {
         var promise = new RSVP.Promise(function (resolve: (value: boolean) => void, reject: (reason: boolean) => void) {
             let res: boolean = confirm(message);
 
@@ -29,6 +15,9 @@ module someTsModule02 {
         return promise;
     }
 
+    /**
+    * generic async version of get JSON AJAX call
+    */
     export function getJSONAsync(url: string): Promise<string> {
         var promise = new RSVP.Promise(function (resolve: (value: string) => void, reject: (reason: any) => void) {
             var client = new XMLHttpRequest();
@@ -57,21 +46,26 @@ module someTsModule02 {
         return promise;
     }
 
+    /**
+    * calling our json file
+    */
     export async function callAsynGetJSON(): Promise<void> {
         let jsonRes: string = await getJSONAsync("/data/someData.json");
 
         if (jsonRes) {
-            alert('await ended');
-            alert(jsonRes)
+            alert("data from server : " + jsonRes)
         }
     }
 
+    /**
+    * demo function with many awaits
+    */
     export async function getJSONAsyncAfterConfirm(): Promise<void> {
-        if (await getConfirmAsyn("yes or no?")) {
+        if (await getConfirmAsync("yes or no?")) {
 
-            if (await getConfirmAsyn("really?")) {
+            if (await getConfirmAsync("really?")) {
 
-                if (await getConfirmAsyn("really really?")) {
+                if (await getConfirmAsync("really really?")) {
                     alert('please wait, data loading');
 
                     await callAsynGetJSON();
