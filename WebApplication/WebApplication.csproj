@@ -69,10 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
+    <Content Include="HTML\index.html" />
     <Content Include="packages.config" />
     <Content Include="Scripts\browser-polyfill.js" />
     <Content Include="Scripts\rsvp-latest.js" />
     <Content Include="tsconfig.json" />
+    <Content Include="Data\someData.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

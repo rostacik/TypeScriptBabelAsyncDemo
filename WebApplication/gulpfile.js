@@ -1,4 +1,5 @@
-﻿//requires definitions
+/// <binding />
+//requires definitions
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var ts = require('gulp-typescript');
