@@ -39,6 +39,7 @@ which will let you compile to TS with version you have downloaded and second one
 
 
 **Steps to make this work**
+
 (I presume you have NodeJS installed on your machine)
 
 - clone this repository,
@@ -46,3 +47,10 @@ which will let you compile to TS with version you have downloaded and second one
 - run gulp task *compile-ts-babel* from either command line or from Visual Studio 2015
 - load page *index.html* from HTML folder and you will see some alerts
 
+**Current state of await/async in TypeScript**
+
+More on when TypeScript will be able to produce directly ES5 JavaScript can be found here [https://github.com/Microsoft/TypeScript/issues/1664](https://github.com/Microsoft/TypeScript/issues/1664 "TS await async task")
+
+From this link I also have nice article about how you can make the whole TypeScript + babel build workflow from Ivo Gabe de Wolff : [http://dev.ivogabe.com/combine-typescript-with-babel/](http://dev.ivogabe.com/combine-typescript-with-babel/ "how to combine TypeScript and babel code in one") - please read this article to know more.
+
+I would like to thank you Ivo for the work you did there.
