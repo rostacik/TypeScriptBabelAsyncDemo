@@ -2,6 +2,10 @@
   "name": "WebApplication",
   "version": "1.0.0",
   "description": "samle of ts async stuff",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rostacik/TypeScriptBabelAsyncDemo.git"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-babel": "^5.2.0",
